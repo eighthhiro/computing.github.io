@@ -1,0 +1,328 @@
+html , .body
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #1f1f1f;
+    width: auto;
+}
+/* Some ideas and codes are inspired by other developers and was modified into my preferences*/
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 0.4rem;
+}
+::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: coral;
+    border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c76408;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+    z-index: 1000;
+    transition: 0.6s;
+}
+header.sticky
+{
+    padding: 5px 50px;
+    background: #fff;
+    border-bottom: 1px solid (0,0,0,.1);
+}
+header .logo
+{
+    width: 40px;
+    height: 40px;
+    padding-left: 15px;
+    position: relative;
+    font-weight: 700;
+    transition: 0.6s;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "SUSE", sans-serif;
+    font-weight: 600;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    position: relative;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header.sticky ul li a
+{
+    color: black;
+    padding-right: 100px;
+}
+/* Home */
+#wrapper {
+	position: relative;
+	height: 100vh;
+}
+#banner {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+#banner::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+}
+#background-video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+ }
+.banner-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.banner-text h2 {
+	font-family: Garamond;
+	font-size: 70px;
+	margin: 0;
+	color: #fff;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.banner-text h2 span {
+	color: coral;
+}
+.banner-text p {
+	font-size: 18.5px;
+	color: #fff;
+}
+.banner-text a {
+	text-decoration: none;
+	background: coral;
+	color: #fff;
+	display: inline-block;
+	padding: 12px 45px;
+	margin: 15px;
+	text-transform: uppercase;
+	font-family: 'SUSE', serif;
+	font-weight: 500;
+	border: 2px solid #fff;
+}
+.banner-text a.btn {
+	background-color: transparent;
+}
+.heading {
+    width: 100%;
+    height: 15vh;
+    background: coral;
+    position: relative;
+    margin-top: -40px;
+}
+/* TO REMOVE */
+.head {
+    width: 100%;
+    height: 100vh;
+    background: coral;
+    position: relative;
+    margin-top: -40px;
+}
+.heading h1{
+    font-size: 60px;
+    padding-top: 10px;
+    font-family: 'SUSE', sans-serif;
+    color: #0f0f0f;
+    text-align: center;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    text-shadow: 0 20px 20px #8a4607;
+    font-weight: 900;
+}
+.timeline {
+    width: 1100px;
+    margin: 40px auto;
+    position: relative;
+    margin-bottom: 80px;
+}
+.container .arrow-l::after{
+        content: "";
+        position: absolute;
+        height: 21px;
+        width: 21px;
+        background: coral;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px 5px #1f1f1f;
+        z-index: 10;
+        top: -10px;
+        left: 37px;
+}
+.container .arrow-r::after{
+    content: "";
+    position: absolute;
+    height: 21px;
+    width: 21px;
+    background: coral;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px #1f1f1f;
+    z-index: 10;
+    top: -10px;
+    right: 38px;
+}
+.timeline::after{
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: 10px;
+    height: 135vh;
+    width: 5px;
+    background: coral;
+    border-radius: 50px;
+    z-index: -1;
+    animation: lineanimation 5s linear forwards;
+    animation-timeline: view(38px);
+}
+@keyframes lineanimation{
+    0%{height: 0vh;}
+    30%{height: 40vh;}
+    40%{height: 55vh;}
+    70%{height: 135vh;}
+}
+.container {
+    width: 40%;
+    position: relative;
+    padding: 10px 20px;
+    animation: Container linear forwards;
+    opacity: 0;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 150px;
+}
+@keyframes Container{
+    55% {
+        opacity: 0;
+    }75% {
+        transform: translateY(-35px)
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.container:nth-child(even){
+    right: -56%;
+}
+.text-box {
+    padding: 5px 30px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 12px coral;
+}
+.text-box .arrow-l{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 15px solid coral;
+    right: -20px;
+}
+.text-box .arrow-r{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 15px solid coral;
+    left: -20px;
+}
+.text-box h2 {
+    font-size: 17px;
+    color: #fff;
+    font-family: 'SUSE', serif;
+    font-style: italic;
+}
+.text-box small{
+    font-size: 12px;
+    color: #fff;
+    font-family: 'SUSE', serif;
+}
+.text-box p{
+    margin-top: 8px;
+    color: #fff;
+    font-family: 'Suse', sans-serif;
+    font-size: 15px;
+}
+#htwo{
+    color: coral;
+    text-shadow: 0 10px 10px#8a4607;
+    font-style: normal;
+    font-size: 21px;
+}
+.text-box span{
+    color: coral;
+    text-shadow: 0 10px 10px#8a4607;
+    padding-left: 12px;
+    font-style: normal;
+    font-size: 21px;
+}
+.date-l {
+    font-size: 20px;
+    font-family: 'SUSE',serif;
+    color: #fff;
+    top: 52px;
+    position: absolute;
+    right: -150px;
+}
+.date-r {
+    font-size: 20px;
+    font-family: 'SUSE',serif;
+    color: #fff;
+    top: 53px;
+    position: absolute;
+    left: -150px;
+}
+#bc{
+    right: -180px;
+}

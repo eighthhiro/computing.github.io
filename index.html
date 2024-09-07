@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hebrew.Blog</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Gulzar&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Header-->
+    <header id="header">
+        <a href="#banner"><img src="favicon.ico" class="logo" alt="Logo"></a>
+         <ul>
+          <li><a href="#banner">Home</a></li>
+          <li><a href="#tl">History</a></li>
+          <li><a href="#IT">I.T.</a></li>
+        </ul>
+    </header>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+        var header= document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY > 0);
+        })
+    </script>
+<!-- Home Part -->
+<div id="wrapper">
+	<div class="banner" id="banner">
+        <video id="background-video" autoplay loop muted>
+            <source src="./Stock Video.mp4" type="video/mp4">
+          </video>
+	</div>
+    <div class="banner-text">
+        <h2>Web <span>Blog</span></h2>
+        <p>A website blog that talks about the history and evolution of computing. <br>The influential figures that significantly shaped computing. <br>And introduce you to the overview of basic IT concepts.</p><a href="#tl">History of Computing</a> <a class="btn" href="#">IT Basics</a>
+    </div>
+</div>
+<!-- History of Computing / Timeline -->
+<div class="heading" id="tl"> <h1> Evolution of Computing</h1> </div>
+<section class="timeline">
+    <div class="container">
+        <div class="date-l" id="bc"> 2700 BC</div>
+        <div class="text-box">
+            <h2 id="htwo">Origins of Computing</h2>
+            <small>2700 BC to 1900s</small>
+            <p> Stretching back to the creation of the Abacus as a simple computing tool. To the transition from mechanical to electromechanical for computing devices.</p>
+            <div class="arrow-l"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="date-r"> 1937</div>
+        <div class="text-box">
+            <h2> 1st Gen <span>Vacuum Tube Era</span></h2>
+            <small>Year 1937-1950</small>
+            <p> The First Digital Computer "ABC" was invented. ABC used vacuum tubes and included binary math. Came along with the inventions Colossus, ENIAC, and EDVAC.</p>
+            <div class="arrow-r"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="date-l"> 1954</div>
+        <div class="text-box">
+            <h2> 2nd Gen<span>Transistor Era</span></h2>
+            <small>Year 1954-1958</small>
+            <p>The first transistorized digital computer "TRADIC" saved electrical energy compared to the power-consuming and burning vacuum tubes.</p>
+            <div class="arrow-l"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-box">
+            <div class="date-r"> 1958</div>
+            <h2> 3rd Gen<span>Integrated Circuit Era</span></h2>
+            <small>Year 1958-present</small>
+            <p>An Integrated Circuit, now called RAM, is made of transistors packed into a single chip for a more economical and uniform design.</p>
+            <div class="arrow-r"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="date-l"> 1969</div>
+        <div class="text-box">
+            <h2> Current <span>Information Age</span></h2>
+            <small>Year 1969-present</small>
+            <p>The birth of network computing with the invention of ARPANET AKA "Internet" and the WWW or World Wide Web in 1989.</p>
+            <div class="arrow-l""></div>
+        </div>
+    </div>
+</section>
+<div class="head" id="tl"> <h1> Evolution of Computing</h1> </div>
+</body>
+</html>
