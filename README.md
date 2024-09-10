@@ -1,1 +1,1 @@
-https://eighthhiro.github.io/
+http://www.compblog.com/
